@@ -1,0 +1,91 @@
+{
+    "name": "jeffersongoncalves/filament-erp",
+    "description": "Umbrella Filament v5 plugin bundling the full Laravel ERP ecosystem (accounting, stock, selling, buying, manufacturing, assets, subcontracting, CRM, projects, support, quality, maintenance) into one panel plugin.",
+    "keywords": [
+        "laravel",
+        "filament",
+        "filament-plugin",
+        "erp",
+        "umbrella",
+        "bundle"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/filament-erp-suite",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.3",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "jeffersongoncalves/filament-erp-core": "3.x-dev",
+        "jeffersongoncalves/filament-erp-accounting": "3.x-dev",
+        "jeffersongoncalves/filament-erp-stock": "3.x-dev",
+        "jeffersongoncalves/filament-erp-selling": "3.x-dev",
+        "jeffersongoncalves/filament-erp-buying": "3.x-dev",
+        "jeffersongoncalves/filament-erp-manufacturing": "3.x-dev",
+        "jeffersongoncalves/filament-erp-assets": "3.x-dev",
+        "jeffersongoncalves/filament-erp-subcontracting": "3.x-dev",
+        "jeffersongoncalves/filament-erp-crm": "3.x-dev",
+        "jeffersongoncalves/filament-erp-projects": "3.x-dev",
+        "jeffersongoncalves/filament-erp-support": "3.x-dev",
+        "jeffersongoncalves/filament-erp-quality": "3.x-dev",
+        "jeffersongoncalves/filament-erp-maintenance": "3.x-dev"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentErp\\Umbrella\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\FilamentErp\\Umbrella\\Tests\\": "tests",
+            "JeffersonGoncalves\\Erp\\Core\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-core/database/factories",
+            "JeffersonGoncalves\\Erp\\Accounting\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-accounting/database/factories",
+            "JeffersonGoncalves\\Erp\\Stock\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-stock/database/factories",
+            "JeffersonGoncalves\\Erp\\Selling\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-selling/database/factories",
+            "JeffersonGoncalves\\Erp\\Buying\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-buying/database/factories",
+            "JeffersonGoncalves\\Erp\\Manufacturing\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-manufacturing/database/factories",
+            "JeffersonGoncalves\\Erp\\Assets\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-assets/database/factories",
+            "JeffersonGoncalves\\Erp\\Subcontracting\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-subcontracting/database/factories",
+            "JeffersonGoncalves\\Erp\\Crm\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-crm/database/factories",
+            "JeffersonGoncalves\\Erp\\Projects\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-projects/database/factories",
+            "JeffersonGoncalves\\Erp\\Support\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-support/database/factories",
+            "JeffersonGoncalves\\Erp\\Quality\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-quality/database/factories",
+            "JeffersonGoncalves\\Erp\\Maintenance\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-maintenance/database/factories"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\FilamentErp\\Umbrella\\FilamentErpServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
