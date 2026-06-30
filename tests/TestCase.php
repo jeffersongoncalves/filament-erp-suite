@@ -11,7 +11,6 @@ use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
-use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\Livewire\Partials\DataStoreOverride;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
@@ -92,7 +91,9 @@ abstract class TestCase extends BaseTestCase
         // transient DataStoreOverride, which loses its WeakMap state between
         // resolutions during a single Livewire test render. Re-bind it as a
         // shared singleton so component state (e.g. the error bag) persists.
-        $this->app->singleton(DataStore::class, DataStoreOverride::class);
+        if (class_exists(DataStoreOverride::class) && class_exists(DataStore::class)) {
+            $this->app->singleton(DataStore::class, DataStoreOverride::class);
+        }
 
         // The domain factories ship in the vendored packages; resolve them by
         // basename across every ERP package, leaf modules first.
@@ -135,7 +136,6 @@ abstract class TestCase extends BaseTestCase
             SupportServiceProvider::class,
             FilamentServiceProvider::class,
             FormsServiceProvider::class,
-            SchemasServiceProvider::class,
             TablesServiceProvider::class,
             ActionsServiceProvider::class,
             InfolistsServiceProvider::class,
