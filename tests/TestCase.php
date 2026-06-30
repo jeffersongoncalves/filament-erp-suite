@@ -24,6 +24,7 @@ use JeffersonGoncalves\Erp\Assets\ErpAssetsServiceProvider;
 use JeffersonGoncalves\Erp\Buying\ErpBuyingServiceProvider;
 use JeffersonGoncalves\Erp\Core\ErpCoreServiceProvider;
 use JeffersonGoncalves\Erp\Crm\ErpCrmServiceProvider;
+use JeffersonGoncalves\Erp\Hr\ErpHrServiceProvider;
 use JeffersonGoncalves\Erp\Maintenance\ErpMaintenanceServiceProvider;
 use JeffersonGoncalves\Erp\Manufacturing\ErpManufacturingServiceProvider;
 use JeffersonGoncalves\Erp\Projects\ErpProjectsServiceProvider;
@@ -37,6 +38,7 @@ use JeffersonGoncalves\FilamentErp\Assets\FilamentErpAssetsServiceProvider;
 use JeffersonGoncalves\FilamentErp\Buying\FilamentErpBuyingServiceProvider;
 use JeffersonGoncalves\FilamentErp\Core\FilamentErpCoreServiceProvider;
 use JeffersonGoncalves\FilamentErp\Crm\FilamentErpCrmServiceProvider;
+use JeffersonGoncalves\FilamentErp\Hr\FilamentErpHrServiceProvider;
 use JeffersonGoncalves\FilamentErp\Maintenance\FilamentErpMaintenanceServiceProvider;
 use JeffersonGoncalves\FilamentErp\Manufacturing\FilamentErpManufacturingServiceProvider;
 use JeffersonGoncalves\FilamentErp\Projects\FilamentErpProjectsServiceProvider;
@@ -78,6 +80,7 @@ abstract class TestCase extends BaseTestCase
         'support' => ['package' => 'laravel-erp-support', 'config' => 'erp-support'],
         'quality' => ['package' => 'laravel-erp-quality', 'config' => 'erp-quality'],
         'maintenance' => ['package' => 'laravel-erp-maintenance', 'config' => 'erp-maintenance'],
+        'hr' => ['package' => 'laravel-erp-hr', 'config' => 'erp-hr'],
     ];
 
     protected function setUp(): void
@@ -153,6 +156,7 @@ abstract class TestCase extends BaseTestCase
             ErpSupportServiceProvider::class,
             ErpQualityServiceProvider::class,
             ErpMaintenanceServiceProvider::class,
+            ErpHrServiceProvider::class,
 
             // UI (filament-erp-*) service providers.
             FilamentErpCoreServiceProvider::class,
@@ -168,6 +172,7 @@ abstract class TestCase extends BaseTestCase
             FilamentErpSupportServiceProvider::class,
             FilamentErpQualityServiceProvider::class,
             FilamentErpMaintenanceServiceProvider::class,
+            FilamentErpHrServiceProvider::class,
 
             // Umbrella provider then the panel that registers ErpPanelPlugin.
             FilamentErpServiceProvider::class,
@@ -403,6 +408,21 @@ abstract class TestCase extends BaseTestCase
                 'create_erp_maintenance_schedule_details_table',
                 'create_erp_maintenance_visits_table',
                 'create_erp_maintenance_visit_purposes_table',
+            ],
+            'hr' => [
+                'create_erp_leave_types_table',
+                'create_erp_holiday_lists_table',
+                'create_erp_holidays_table',
+                'create_erp_salary_components_table',
+                'create_erp_employees_table',
+                'create_erp_salary_structures_table',
+                'create_erp_salary_structure_components_table',
+                'create_erp_salary_structure_assignments_table',
+                'create_erp_attendances_table',
+                'create_erp_leave_applications_table',
+                'create_erp_salary_slips_table',
+                'create_erp_salary_slip_components_table',
+                'create_erp_payroll_entries_table',
             ],
         ];
     }

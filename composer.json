@@ -33,7 +33,8 @@
         "jeffersongoncalves/filament-erp-projects": "self.version",
         "jeffersongoncalves/filament-erp-support": "self.version",
         "jeffersongoncalves/filament-erp-quality": "self.version",
-        "jeffersongoncalves/filament-erp-maintenance": "self.version"
+        "jeffersongoncalves/filament-erp-maintenance": "self.version",
+        "jeffersongoncalves/filament-erp-hr": "self.version"
     },
     "require-dev": {
         "larastan/larastan": "^2.0|^3.0",
@@ -63,7 +64,8 @@
             "JeffersonGoncalves\\Erp\\Projects\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-projects/database/factories",
             "JeffersonGoncalves\\Erp\\Support\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-support/database/factories",
             "JeffersonGoncalves\\Erp\\Quality\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-quality/database/factories",
-            "JeffersonGoncalves\\Erp\\Maintenance\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-maintenance/database/factories"
+            "JeffersonGoncalves\\Erp\\Maintenance\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-maintenance/database/factories",
+            "JeffersonGoncalves\\Erp\\Hr\\Database\\Factories\\": "vendor/jeffersongoncalves/laravel-erp-hr/database/factories"
         }
     },
     "extra": {
