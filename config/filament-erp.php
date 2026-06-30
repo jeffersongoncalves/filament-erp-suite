@@ -28,6 +28,7 @@ return [
         'support' => true,
         'quality' => true,
         'maintenance' => true,
+        'hr' => true,
     ],
 
 ];
