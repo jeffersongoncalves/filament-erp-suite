@@ -9,6 +9,7 @@ use JeffersonGoncalves\FilamentErp\Assets\FilamentErpAssetsPlugin;
 use JeffersonGoncalves\FilamentErp\Buying\FilamentErpBuyingPlugin;
 use JeffersonGoncalves\FilamentErp\Core\FilamentErpCorePlugin;
 use JeffersonGoncalves\FilamentErp\Crm\FilamentErpCrmPlugin;
+use JeffersonGoncalves\FilamentErp\Hr\FilamentErpHrPlugin;
 use JeffersonGoncalves\FilamentErp\Maintenance\FilamentErpMaintenancePlugin;
 use JeffersonGoncalves\FilamentErp\Manufacturing\FilamentErpManufacturingPlugin;
 use JeffersonGoncalves\FilamentErp\Projects\FilamentErpProjectsPlugin;
@@ -40,6 +41,7 @@ class ErpPanelPlugin implements Plugin
         'support' => FilamentErpSupportPlugin::class,
         'quality' => FilamentErpQualityPlugin::class,
         'maintenance' => FilamentErpMaintenancePlugin::class,
+        'hr' => FilamentErpHrPlugin::class,
     ];
 
     /**
