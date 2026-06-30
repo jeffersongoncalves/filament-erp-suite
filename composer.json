@@ -21,8 +21,6 @@
     ],
     "require": {
         "php": "^8.2",
-        "filament/filament": "^5.3",
-        "spatie/laravel-package-tools": "^1.14.0",
         "jeffersongoncalves/filament-erp-core": "self.version",
         "jeffersongoncalves/filament-erp-accounting": "self.version",
         "jeffersongoncalves/filament-erp-stock": "self.version",
